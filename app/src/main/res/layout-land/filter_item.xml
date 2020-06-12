@@ -63,7 +63,7 @@
             android:id="@+id/home_tv_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="10dp"
             android:text="@string/date"
             android:textColor="@color/colorDark"
             android:textSize="10sp"
@@ -81,7 +81,7 @@
             app:itemSpacing="10dp"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/home_img_avatar"
+            app:layout_constraintStart_toStartOf="@id/home_tv_gender"
             app:layout_constraintTop_toBottomOf="@id/home_tv_date"
             app:singleLine="false" />
 
@@ -93,7 +93,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/colorDark"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/home_img_avatar"
+            app:layout_constraintStart_toStartOf="@id/home_tv_gender"
             app:layout_constraintTop_toBottomOf="@id/main_country_group" />
 
         <com.google.android.material.chip.ChipGroup
@@ -108,7 +108,7 @@
             app:itemSpacing="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/home_img_avatar"
+            app:layout_constraintStart_toStartOf="@id/home_tv_gender"
             app:layout_constraintTop_toBottomOf="@id/main_separator"
             app:singleLine="false" />
 

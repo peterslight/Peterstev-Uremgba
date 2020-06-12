@@ -11,7 +11,7 @@
     app:backgroundTint="@color/colorWhite"
     app:cardCornerRadius="5dp"
     app:cardElevation="10dp"
-    app:rippleColor="@color/colorPrimaryTranslucent">
+    app:rippleColor="@color/colorDarkLight">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,90 +21,119 @@
         android:paddingEnd="5dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/result_name"
+            android:id="@+id/result_tv_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Peterstev Uremgba"
+            android:text="@string/username"
             android:textColor="@color/colorDark"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toStartOf="@id/result_chip_gender"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.chip.Chip
+            android:id="@+id/result_chip_gender"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/colorWhite"
+            app:chipBackgroundColor="@color/colorBlue"
+            android:text="@string/female"
+            app:layout_constraintBottom_toBottomOf="@id/result_tv_username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/result_tv_username"
+            app:layout_constraintTop_toTopOf="@id/result_tv_username" />
+
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/result_email"
+            android:id="@+id/result_tv_job"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:text="uremgbachisom@gmail.com"
+            android:layout_marginStart="5dp"
+            android:drawableStart="@drawable/ic_round_star_24"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/accountant"
             android:textColor="@color/colorDark"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/result_name" />
+            app:layout_constraintTop_toBottomOf="@id/result_tv_username" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/result_car_desc"
+            android:id="@+id/result_tv_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:text="yellow Ford 1998 model"
-            android:textColor="@color/colorDark"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@id/result_country"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/result_email" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/result_country"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_medium"
-            android:gravity="end"
-            android:text="Russia"
+            android:layout_marginStart="5dp"
+            android:drawableStart="@drawable/ic_round_email_24"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/lato_light"
+            android:text="@string/uremgbachisom_gmail_com"
             android:textColor="@color/colorDark"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/result_car_desc"
-            app:layout_constraintTop_toBottomOf="@id/result_email" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/result_gender_job"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="end"
-            android:text="Female, Accountant II"
-            android:textColor="@color/colorDark"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/result_car_desc"
-            app:layout_constraintTop_toBottomOf="@id/result_car_desc" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/result_bio"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/biotext"
-            android:textColor="@color/colorDark"
-            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/result_gender_job" />
+            app:layout_constraintTop_toBottomOf="@id/result_tv_job" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/result_chip_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:theme="@style/Widget.MaterialComponents.ChipGroup"
+            app:itemSpacing="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result_tv_email"
+            app:singleLine="false">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/result_chip_car"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/red_toyoto_prado_2020"
+                app:layout_constraintBottom_toBottomOf="@id/result_tv_username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/result_tv_username"
+                app:layout_constraintTop_toTopOf="@id/result_tv_username" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/result_chip_country"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/united_states"
+                app:layout_constraintBottom_toBottomOf="@id/result_tv_username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/result_tv_username"
+                app:layout_constraintTop_toTopOf="@id/result_tv_username" />
+
+        </com.google.android.material.chip.ChipGroup>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/result_bio_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/lato_regular"
             android:text="@string/bio"
             android:textColor="@color/colorDark"
             android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/result_bio"
-            app:layout_constraintTop_toBottomOf="@id/result_gender_job" />
-
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result_chip_group" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

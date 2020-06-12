@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.chip.Chip
 import com.peterstev.peterstevuremgba.R
 import com.peterstev.peterstevuremgba.models.FilterResult
 
@@ -38,20 +39,24 @@ class ResultAdapter(
 
     class ResultViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val name = itemView.findViewById<AppCompatTextView>(R.id.result_name)
-        private val email = itemView.findViewById<AppCompatTextView>(R.id.result_email)
-        private val carDesc = itemView.findViewById<AppCompatTextView>(R.id.result_car_desc)
-        private val country = itemView.findViewById<AppCompatTextView>(R.id.result_country)
-        private val gender = itemView.findViewById<AppCompatTextView>(R.id.result_gender_job)
+        private val name = itemView.findViewById<AppCompatTextView>(R.id.result_tv_username)
+        private val email = itemView.findViewById<AppCompatTextView>(R.id.result_tv_email)
+        private val car = itemView.findViewById<Chip>(R.id.result_chip_car)
+        private val gender = itemView.findViewById<Chip>(R.id.result_chip_gender)
+        private val country = itemView.findViewById<Chip>(R.id.result_chip_country)
+        private val occupation = itemView.findViewById<AppCompatTextView>(R.id.result_tv_job)
         private val bio = itemView.findViewById<AppCompatTextView>(R.id.result_bio_text)
 
         fun setItems(item: FilterResult) {
             name.text = ("${item.firstName} ${item.lastName}")
             email.text = item.email
-            carDesc.text = ("${item.carColor} ${item.carModel} ${item.carModelYear} model")
+            car.text = ("${item.carColor} ${item.carModelYear} ${item.carModel}")
             country.text = item.country
-            gender.text = ("${item.gender}, ${item.jobTitle}")
+            gender.text = item.gender
             bio.text = item.bio
+            occupation.text = item.jobTitle
+
+//            if (item.gender.equals("male",  true))
         }
     }
 }

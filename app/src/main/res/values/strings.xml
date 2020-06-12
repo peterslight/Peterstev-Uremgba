@@ -11,4 +11,9 @@
     <string name="username">Hernandez Stokes</string>
     <string name="gender_male">Male</string>
     <string name="date">Wed, 04 Mar 2020 03:34:31 GMT</string>
+    <string name="female">Female</string>
+    <string name="accountant">Accountant</string>
+    <string name="uremgbachisom_gmail_com">uremgbachisom@gmail.com</string>
+    <string name="red_toyoto_prado_2020">Red Toyoto Prado 2020</string>
+    <string name="united_states">United States</string>
 </resources>
