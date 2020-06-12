@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><!--    //id,first_name,last_name,email,country,car_model,car_model_year,car_color,gender,job_title,bio-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/colorWhite"
+    app:backgroundTint="@color/colorWhite"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    app:rippleColor="@color/colorPrimaryTranslucent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Peterstev Uremgba"
+            android:textColor="@color/colorDark"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="uremgbachisom@gmail.com"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result_car_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="yellow Ford 1998 model"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/result_country"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result_email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end"
+            android:text="Russia"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/result_car_desc"
+            app:layout_constraintTop_toBottomOf="@id/result_email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result_gender_job"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="end"
+            android:text="Female, Accountant II"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/result_car_desc"
+            app:layout_constraintTop_toBottomOf="@id/result_car_desc" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result_bio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/biotext"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result_gender_job" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result_bio_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/bio"
+            android:textColor="@color/colorDark"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/result_bio"
+            app:layout_constraintTop_toBottomOf="@id/result_gender_job" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
